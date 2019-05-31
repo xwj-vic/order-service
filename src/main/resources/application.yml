@@ -28,11 +28,16 @@ spring:
     locations: "classpath:/db/migration"
 
   #TODO: change sleuth sample probability
-
+  sleuth:
+    web:
+      client:
+        enabled: true
+    sampler:
+      probability: 1.0
   #TODO: add zipkin configs for local
-
+  zipkin:
+    base-url: http://zipkin.team-i.cloud.school.thoughtworks.cn
 #TODO: change servlet log level to view the logs
-
 springfox:
   documentation:
     swagger:
@@ -45,4 +50,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://localhost:8090/eureka/
+logging:
+  level:
+    org.springframework.web: debug

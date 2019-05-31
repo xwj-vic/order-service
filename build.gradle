@@ -54,7 +54,7 @@ ext {
 
 dependencies {
     //TODO: add zipkin starter
-
+    implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
